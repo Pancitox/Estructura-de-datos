@@ -1,0 +1,8 @@
+1
+LIBRO
+El Principito
+1234567890123
+Antoine de Saint-Exupéry
+1943
+Un cuento sobre un niño y un aviador.
+0

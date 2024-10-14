@@ -1,11 +1,22 @@
 #include "Revista.h"
-#include <iostream>
+using namespace std;
 
-revista::revista(string nombre, string isbn, string autor, int numeroEdicion, string mesPublicacion)
+Revista::Revista(string nombre,string isbn,string autor, string numeroEdicion,string mesPublicacion)
     : materialBibliografico(nombre, isbn, autor), numeroEdicion(numeroEdicion), mesPublicacion(mesPublicacion) {}
 
-void revista::mostrarInformacion() const {
-    cout << "Revista: " << _nombre << "\nISBN: " << _isbn << "\nAutor: " << _autor 
-         << "\nNumero de Edicion: " << numeroEdicion << "\nMes de Publicacion: " << mesPublicacion
-         << "\nPrestado: " << (_prestado ? "Si" : "No") << endl;
+void Revista::mostrarInformacion() {
+    cout << "Revista: " << getNombre() << "\n" 
+              << "ISBN: " << getISBN() << "\n"   
+              << "Autor: " << getAutor() << "\n"   
+              << "Numero de Edicion: " << numeroEdicion << "\n"
+              << "Mes de Publicacion: " << mesPublicacion << "\n"
+              << "Prestado: " << (estaPrestado() ? "Si" : "No") <<endl; 
+}
+
+string Revista::getNumeroEdicion() const {
+    return numeroEdicion;
+}
+
+string Revista::getMesPublicacion() const {
+    return mesPublicacion;
 }

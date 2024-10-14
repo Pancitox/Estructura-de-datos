@@ -1,12 +1,16 @@
 #pragma once
 #include <iostream>
 #include "materialBibliografico.h"
+using namespace std;
 
-class revista : public materialBibliografico{
-    private:
-        int numeroEdicion;
-        string mesPublicacion;
-    public:
-        revista(string nombre, string isbn, string autor, int numeroEdicion, string mesPublicacion);
-        void mostrarInformacion() const;
+class Revista : public materialBibliografico { 
+private:
+    string numeroEdicion;
+    string mesPublicacion;
+
+public:
+    Revista(string nombre, string isbn, string autor, string numeroEdicion, string mesPublicacion);
+    void mostrarInformacion(); 
+    string getNumeroEdicion() const;             
+    string getMesPublicacion() const;   
 };

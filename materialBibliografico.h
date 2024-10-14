@@ -1,6 +1,6 @@
-#ifndef materialBibliografico_H
-#define materialBibliografico_H
-#pragma once
+#ifndef MATERIALBIBLIOGRAFICO_H
+#define MATERIALBIBLIOGRAFICO_H
+
 #include <iostream>
 using namespace std;
 
@@ -15,10 +15,14 @@ public:
     materialBibliografico(string nombre, string isbn, string autor);
     virtual ~materialBibliografico() = default;
 
-    bool estaPrestado();
-    bool setPrestado();
-    void mostrarInformacion(); 
-    string getNombre();
-    string getAutor();
+    bool estaPrestado();        
+    void setPrestado(bool estado);       
+    void prestar();       
+    void devolver();       
+    string getNombre();     
+    string getAutor();      
+    void mostrarInformacion();  
+    string getISBN();
 };
-#endif
+
+#endif 

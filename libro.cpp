@@ -3,11 +3,25 @@
 #include <iostream>
 using namespace std;
 
-// Constructor
 Libro::Libro(string nombre, string isbn, string autor, string fechaPublicacion, string resumen)
-    : materialBibliografico(nombre, isbn, autor), fechaPublicacion(fechaPublicacion), resumen(resumen) {}
+    : materialBibliografico(nombre, isbn, autor), 
+      isbn(isbn), 
+      fechaPublicacion(fechaPublicacion), 
+      resumen(resumen) {}
 
-// Implementación del método mostrarInformacion
+
+string Libro::getISBN() const{
+    return isbn;
+}
+
+string Libro::getFechaPublicacion() const {
+    return fechaPublicacion;
+}
+
+string Libro::getResumen() const {
+    return resumen;
+}
+
 void Libro::mostrarInformacion(){
     cout << "Libro: " << getNombre() << "\nISBN: " << _isbn << "\nAutor: " << getAutor() 
          << "\nFecha de Publicación: " << fechaPublicacion << "\nResumen: " << resumen
